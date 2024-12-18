@@ -1,0 +1,88 @@
+:root{
+    --main-color:#3867d6;
+}
+
+/* Styling for label */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+/* Styling for input[type="text"] and textarea */
+input[type="text"],
+textarea {
+    width: 100%;
+    background: #333;
+    border-radius: .5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #fff;
+    text-transform: none;
+}
+
+input[type="email"],
+textarea {
+    width: 100%;
+    background: #333;
+    border-radius: .5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #fff;
+    text-transform: none;
+}
+
+input[type="date"],
+textarea {
+    width: 100%;
+    background: #333;
+    border-radius: .5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #fff;
+    text-transform: none;
+}
+
+input[type="number"],
+textarea {
+    width: 100%;
+    background: #333;
+    border-radius: .5rem;
+    padding: .5rem;
+    font-size: 1rem;
+    color: #fff;
+    text-transform: none;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.8rem 3rem;
+    font-size: 1.2rem;
+    border-radius: .5rem;
+    background: #666;
+    color:#fff;
+    cursor: pointer;
+    font-weight: 100;
+    margin-right: 7rem;
+}
+
+.btn:hover{
+    background:var(--main-color);
+}
+
+body{
+    background: #222;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
