@@ -1,0 +1,52 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="CSSS/bootstrap.min.css">
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">First name</th>
+      <th scope="col">Last name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Contact No</th>
+      <th scope="col">Password</th>
+      <th scope="col">Confirm Password</th>
+    </tr>
+  </thead>
+  <tbody>
+ 	<c:forEach var="cus" items="${customer}">
+ 		<tr>
+ 			<td>${cus.firstname }</td>
+ 			<td>${cus.lastname }</td>
+ 			<td>${cus.email }</td>
+ 			<td>${cus.contactNo }</td>
+ 			<td>${cus.password }</td>
+ 			<td>${cus.conpassword }</td>
+ 			<td>
+ 				<form action="singleDataButtonData" method="post">
+ 					<input type="hidden" name="email" value="${cus.email}">
+					<button type="Submit" class="btn btn-outline-success">Data</button>
+ 				</form>
+ 			</td>
+ 			<td>
+ 				<form action="deleteCustomer" method="post">
+ 					<input type="hidden" name="email" value="${cus.email}">
+					<button type="Submit" class="btn btn-outline-danger">Delete</button>
+ 				</form>
+ 			</td>
+ 		</tr>
+ 	</c:forEach>
+  </tbody>
+</table>
+
+</body>
+</html>
